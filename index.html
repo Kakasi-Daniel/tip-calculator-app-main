@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="./images/logo.svg" alt="">
+    </div>
+    <div class="sides">
+      <div class="lhs">
+        <div class="bill">
+          <label for="bill">Bill</label>
+          <div class="billInput">
+            <input placeholder="0" type="number" name="bill" id="bill">
+            <img src="./images/icon-dollar.svg" alt="">
+          </div>
+        </div>
+        <div class="tipPercentage">
+          <p>Select Tip %</p>
+          <div class="buttons">
+            <button data-value="5" class="btn">5%</button>
+            <button data-value="10" class="btn">10%</button>
+            <button data-value="15" class="btn">15%</button>
+            <button data-value="25" class="btn">25%</button>
+            <button data-value="50" class="btn">50%</button>
+            <input  class="customPercentage" placeholder="Custom" type="number">
+          </div>
+        </div>
+        <div class="numberOfPeople">
+          <label for="noOfP">Number of People</label>
+          <div class="numberOfPeopleInput">
+            <input placeholder="0" type="number" name="noOfP" id="noOfP" class="">
+            <img src="./images/icon-person.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="rhs">
+        <div class="results">
+          <div class="result resultAmount">
+            <div class="resultLabel">
+              <div>Tip Amount</div>
+              <div>/ person</div>
+            </div>
+            <div class="resultValue amountValue">$0.00</div>
+          </div>
+          <div class="result resultTotal">
+            <div class="resultLabel">
+              <div>Total</div>
+              <div>/ person</div>
+            </div>
+            <div class="resultValue totalValue">$0.00</div>
+          </div>
+        </div>
+        <button class="resetBtn inactive" >RESET</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

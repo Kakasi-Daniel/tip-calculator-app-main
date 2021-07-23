@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body{
+    height: 100vh;
+    background: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    top: -100px;
+    transform: translateX(-50%);
+}
+
+.sides{
+    display: flex;
+}
+
+.lhs{
+    width: 300px;
+}
+
+.billInput,
+.numberOfPeopleInput{
+    position: relative;
+}
+
+.billInput input,
+.numberOfPeopleInput input
+{
+    width: 300px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    position: relative;
+    font-size: 24px;
+    border: transparent 1px solid;
+    position: relative;
+}
+
+.billInput img,
+.numberOfPeopleInput img{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.buttons input{
+    max-width: 100%;
+    overflow: hidden;
+    text-align: right;
+    font-size: 22px;
+    border-radius: 5px;
+    border: none;
+}
+.buttons input::placeholder{
+    text-align: center;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,40px);
+    gap: 10px;
+}
+
+.btn{
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    transition: background-color .3s,
+                color .3s;
+}
+
+input:focus{
+    outline: none;
+    border: hsl(172, 67%, 45%) 1px solid;
+}
+
+label{
+    margin-bottom: 10px;
+    display: block;
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+.bill,
+.tipPercentage{
+    margin-bottom: 25px;
+}
+
+.btn:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: #000;
+}
+
+.rhs{
+    width: 300px;
+    background-color: hsl(183, 100%, 15%);
+    color: #fff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.result{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resultValue{
+    font-size: 30px;
+    color: hsl(172, 67%, 45%);
+}
+
+.resultLabel div:nth-child(2){
+    color: #aaa;
+    font-size: 14px;
+}
+
+.resetBtn{
+    background-color: hsl(186, 14%, 43%);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.resetBtn:hover{
+    cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+    color: #000;
+}
+
+.inactive{
+    cursor: not-allowed;
+    background-color: hsla(172, 67%, 45%, 0.151);
+    color: #000;
+}
+
+.inactive:hover{
+    cursor: not-allowed;
+    background-color: hsla(172, 67%, 45%, 0.151);
+    color: #000;
+}
+
+.error{
+    border: 1px red solid !important;
+}
+
+@media (max-width:600px) {
+    .container{
+        margin-top: 70px;
+    }
+    .logo{
+        top: -65px;
+    }
+    .sides{
+        flex-direction: column;
+    }
+    .lhs,
+    .rhs{
+        width: 100%;
+    }
+    .rhs{
+        margin: 20px 0;
+    }
+    .buttons{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .result{
+        margin-bottom: 20px;
+    }
+}
